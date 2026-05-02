@@ -1,0 +1,30 @@
+{
+  "name": "science-plate2",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "yarn@4.14.1",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "oxlint src",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "@tanstack/react-query": "^5.100.8",
+    "next": "16.2.4",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "zustand": "^5.0.12"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "babel-plugin-react-compiler": "1.0.0",
+    "oxlint": "^1.62.0",
+    "prettier": "^3.8.3",
+    "typescript": "^5",
+    "typescript-plugin-css-modules": "^5.2.0"
+  }
+}
