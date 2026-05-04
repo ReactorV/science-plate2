@@ -30,7 +30,7 @@ No test runner is configured in this project.
 
 **Source layout:** `src/app/` uses the App Router file conventions (`layout.tsx`, `page.tsx`, route segments as directories).
 
-**Behavioral section**
+## Behavioral section
 1. Don’t assume. Don’t hide confusion. Surface tradeoffs.
 2. Minimum code that solves the problem. Nothing speculative.
 3. Touch only what you must. Clean up only your own mess.
