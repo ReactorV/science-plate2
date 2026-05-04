@@ -30,6 +30,27 @@ No test runner is configured in this project.
 
 **Source layout:** `src/app/` uses the App Router file conventions (`layout.tsx`, `page.tsx`, route segments as directories).
 
+# Project Agent Pipeline
+
+This project uses a 4-agent pipeline. Agents are invoked via slash commands.
+
+## Pipeline Order
+1. /architect — plans everything, creates feature folder and all spec artifacts
+2. /coder     — implements based on arch-output.md and tasks.md
+3. /tester    — writes and runs tests, produces test-output.md
+4. /reviewer  — final quality gate, produces review.md
+
+## Feedback Loops
+- Loop A: tester writes test-failures.md → /coder fixes → re-run /tester only
+- Loop B: reviewer writes review.md → /coder fixes → re-run /tester + /reviewer
+
+## Artifact Location
+All artifacts live in .specify/specs/<feature>/
+
+## Constitution
+Project principles live in .specify/memory/constitution.md
+All agents read this before starting.
+
 ## Behavioral section
 1. Don’t assume. Don’t hide confusion. Surface tradeoffs.
 2. Minimum code that solves the problem. Nothing speculative.
