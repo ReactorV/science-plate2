@@ -1,0 +1,27 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1777996223322,
+      "tag": "0000_cultured_skullbuster",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1777996779187,
+      "tag": "0001_special_spyke",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1777997000000,
+      "tag": "0003_rename_portion_g",
+      "breakpoints": true
+    }
+  ]
+}

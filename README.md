@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Plate — Science-Based Meal Planning
 
-## Getting Started
+A deterministic, evidence-tracked meal-planning app built on Next.js 16, React 19, Drizzle ORM + Turso, TanStack Query v5, and Zustand.
 
-First, run the development server:
+## Quickstart
 
 ```bash
-npm run dev
-# or
+# 1. Install dependencies (yarn 4 PnP)
+corepack enable
+yarn install
+
+# 2. Copy environment file
+cp .env.example .env.local
+# Edit .env.local with your Turso credentials
+
+# 3. Generate & run DB migrations
+yarn db:generate
+yarn db:migrate
+
+# 4. Seed reference data
+yarn tsx scripts/seed-nutrients.ts
+yarn tsx scripts/seed-reference-packs.ts
+
+# 5. Start dev server
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) → redirects to `/today` cockpit.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Commands
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Command | Description |
+|---------|-------------|
+| `yarn dev` | Development server |
+| `yarn build` | Production build |
+| `yarn lint` | Lint with oxlint |
+| `yarn format` | Format with Prettier |
+| `yarn format:check` | Check formatting |
+| `yarn typecheck` | TypeScript type checking |
+| `yarn test` | Run Vitest unit tests |
+| `yarn test:watch` | Watch mode |
+| `yarn e2e` | Playwright E2E tests |
+| `yarn db:generate` | Generate Drizzle migrations |
+| `yarn db:migrate` | Apply migrations |
+| `yarn db:studio` | Open Drizzle Studio |
 
-## Learn More
+## Architecture
 
-To learn more about Next.js, take a look at the following resources:
+- **Next.js 16** App Router with React 19 + React Compiler
+- **Drizzle ORM** + libSQL/Turso for persistence
+- **Better-Auth** for authentication
+- **Nutrition engine**: Revised Harris-Benedict BMR, Remer-Manz PRAL, 3-layer adequacy scoring
+- **Bioavailability rules**: Fe+VitC synergy, tannin inhibition, mineral supplement timing, phytate load
+- **Evidence tracking**: Deterministic SHA-256 hash for every calculation, evidence pack versioning
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Key Directories
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+src/
+├── app/today/          # Today cockpit UI
+├── app/onboarding/     # Onboarding wizard
+├── app/api/            # API routes
+├── lib/nutrition/      # Targets, PRAL, adequacy, confidence, scoring
+├── lib/bioavailability/ # Rule engine + 5 rules
+├── lib/units/          # Quantity value-object
+├── lib/db/             # Drizzle schema + migrations
+└── data/               # Nutrients + reference packs JSON
+```

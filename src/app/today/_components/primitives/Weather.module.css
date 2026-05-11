@@ -1,0 +1,18 @@
+.weather {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+}
+
+.sun {
+  color: var(--color-synergy, oklch(0.78 0.14 90));
+}
+
+.cloud {
+  color: var(--color-neutral, oklch(0.60 0.04 240));
+}
+
+.rain {
+  color: var(--color-caution, oklch(0.70 0.14 30));
+}

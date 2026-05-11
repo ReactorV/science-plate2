@@ -1,0 +1,125 @@
+.drawer {
+  position: fixed;
+  top: 0;
+  right: -400px;
+  width: 380px;
+  height: 100vh;
+  background: var(--color-surface, #111);
+  border-left: 1px solid var(--color-border, #222);
+  z-index: 100;
+  transition: right 0.25s ease;
+  overflow-y: auto;
+}
+
+.drawer.on {
+  right: 0;
+}
+
+.drawerHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--color-border, #222);
+}
+
+.drawerHead h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.close {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: var(--color-text-muted, #888);
+  padding: 4px;
+}
+
+.drawerBody {
+  padding: 20px;
+}
+
+.evStack {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.evRow {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.evK {
+  font-size: 0.7rem;
+  color: var(--color-text-muted, #888);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.evV {
+  font-size: 0.85rem;
+  color: var(--color-text, #eee);
+}
+
+.mono {
+  font-family: var(--font-geist-mono);
+  font-size: 0.8rem;
+}
+
+.evNote {
+  margin-top: 20px;
+  padding: 12px;
+  border-radius: 6px;
+  background: var(--color-surface-alt, #1a1a1a);
+  font-size: 0.75rem;
+  color: var(--color-text-muted, #888);
+  line-height: 1.5;
+}
+
+.ruleSection {
+  margin-top: 16px;
+  border-top: 1px solid var(--color-border, #222);
+  padding-top: 12px;
+}
+
+.ruleSection h4 {
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin: 0 0 8px;
+}
+
+.ruleItem {
+  padding: 8px 0;
+  border-bottom: 1px solid var(--color-border, #181818);
+}
+
+.ruleItem:last-child {
+  border-bottom: none;
+}
+
+.ruleId {
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+.ruleVer {
+  font-size: 0.65rem;
+  color: var(--color-text-muted, #888);
+}
+
+.ruleReason {
+  font-size: 0.75rem;
+  color: var(--color-text, #ccc);
+  margin-top: 2px;
+}
+
+.ruleRefs {
+  font-size: 0.65rem;
+  color: var(--color-text-muted, #666);
+  margin-top: 2px;
+}

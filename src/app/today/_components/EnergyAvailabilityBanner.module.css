@@ -1,0 +1,44 @@
+.banner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+}
+
+.low {
+  background: oklch(0.72 0.14 145 / 0.1);
+  border: 1px solid oklch(0.72 0.14 145 / 0.3);
+  color: oklch(0.78 0.14 145);
+}
+
+.moderate {
+  background: oklch(0.72 0.12 60 / 0.1);
+  border: 1px solid oklch(0.72 0.12 60 / 0.3);
+  color: oklch(0.78 0.12 60);
+}
+
+.high {
+  background: oklch(0.65 0.16 20 / 0.1);
+  border: 1px solid oklch(0.65 0.16 20 / 0.3);
+  color: oklch(0.72 0.16 20);
+}
+
+.icon {
+  flex-shrink: 0;
+  font-size: 1.1rem;
+}
+
+.content {
+  flex: 1;
+}
+
+.label {
+  font-weight: 600;
+  margin-right: 6px;
+}
+
+.value {
+  font-variant-numeric: tabular-nums;
+}

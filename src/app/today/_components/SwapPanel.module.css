@@ -1,0 +1,97 @@
+.swaps {
+  border: 1px solid var(--color-border, #222);
+  border-radius: 8px;
+  background: var(--color-surface, #111);
+  padding: 16px;
+}
+
+.swapsHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.swapsHead h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.muted {
+  font-size: 0.7rem;
+  color: var(--color-text-muted, #888);
+}
+
+.swapList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.swap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border: 1px solid var(--color-border, #222);
+  border-radius: 6px;
+}
+
+.swapL {
+  flex: 1;
+}
+
+.swapTitle {
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.swapReason {
+  font-size: 0.7rem;
+  color: var(--color-text-muted, #888);
+  margin-top: 2px;
+}
+
+.swapImpact {
+  display: flex;
+  gap: 6px;
+}
+
+.imp {
+  font-size: 0.7rem;
+  padding: 2px 6px;
+  border-radius: 3px;
+  background: var(--color-surface-alt, #1a1a1a);
+}
+
+.imp em {
+  font-weight: 600;
+  margin-right: 3px;
+  font-style: normal;
+}
+
+.btn {
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  border: 1px solid var(--color-border, #333);
+  background: transparent;
+  color: var(--color-text-muted, #aaa);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btn:hover {
+  background: var(--color-surface-alt, #1a1a1a);
+}
+
+.empty {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.8rem;
+  color: var(--color-text-muted, #888);
+}

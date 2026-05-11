@@ -1,0 +1,100 @@
+.timeline {
+  margin-top: 16px;
+  border: 1px solid var(--color-border, #222);
+  border-radius: 8px;
+  background: var(--color-surface, #111);
+  padding: 16px;
+}
+
+.tlHead {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.tlTitle h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.tlSub {
+  display: flex;
+  gap: 6px;
+  font-size: 0.75rem;
+  color: var(--color-text-muted, #888);
+  margin-top: 2px;
+}
+
+.sep {
+  opacity: 0.4;
+}
+
+.ok {
+  color: var(--accent, oklch(0.72 0.14 145));
+}
+
+.tlGrid {
+  position: relative;
+}
+
+.tlAxis {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2%;
+  margin-bottom: 8px;
+}
+
+.tlTick {
+  font-size: 0.6rem;
+  color: var(--color-text-muted, #666);
+}
+
+.rail {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.railLabel {
+  width: 56px;
+  font-size: 0.65rem;
+  color: var(--color-text-muted, #888);
+  flex-shrink: 0;
+}
+
+.railTrack {
+  position: relative;
+  flex: 1;
+  height: 36px;
+}
+
+.trainBlock {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.tbBar {
+  height: 4px;
+  background: var(--accent, oklch(0.72 0.14 145));
+  border-radius: 2px;
+}
+
+.tbMeta {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  margin-top: 2px;
+  font-size: 0.65rem;
+  color: var(--color-text-muted, #aaa);
+}
+
+.tbKcal {
+  color: oklch(0.70 0.14 30);
+}

@@ -1,0 +1,88 @@
+.card {
+  border: 1px solid var(--color-border, #222);
+  border-radius: 8px;
+  background: var(--color-surface, #111);
+  padding: 14px;
+  cursor: pointer;
+  transition: border-color 0.15s;
+}
+
+.card:hover,
+.card:focus-visible {
+  border-color: var(--accent, oklch(0.72 0.14 145));
+  outline: none;
+}
+
+.cardTop {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+
+.time {
+  font-size: 0.7rem;
+  color: var(--color-text-muted, #888);
+}
+
+.name {
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 4px;
+}
+
+.kcal {
+  font-size: 1.1rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.kcalUnit {
+  font-size: 0.7rem;
+  color: var(--color-text-muted, #888);
+  font-weight: 400;
+}
+
+.macBar {
+  display: flex;
+  height: 4px;
+  border-radius: 2px;
+  overflow: hidden;
+  margin-top: 8px;
+  gap: 1px;
+}
+
+.macP { background: oklch(0.72 0.12 200); }
+.macC { background: oklch(0.72 0.14 145); }
+.macF { background: oklch(0.72 0.12 60); }
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 8px;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.65rem;
+}
+
+.chipSynergy {
+  background: oklch(0.72 0.14 145 / 0.15);
+  color: oklch(0.78 0.14 90);
+}
+
+.chipCaution {
+  background: oklch(0.70 0.14 30 / 0.15);
+  color: oklch(0.70 0.14 30);
+}
+
+.chipWarning {
+  background: oklch(0.65 0.16 20 / 0.15);
+  color: oklch(0.65 0.16 20);
+}
