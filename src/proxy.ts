@@ -4,8 +4,7 @@ import { auth } from "@/lib/auth/server";
 
 const PROTECTED_PREFIXES = ["/today", "/foods", "/plans", "/athlete"];
 
-export async function middleware(request: NextRequest) {
-  // Allow E2E tests to bypass auth in CI — blocked in production even if var is set.
+export async function proxy(request: NextRequest) {
   if (
     process.env.E2E_AUTH_BYPASS === "true" &&
     process.env.NODE_ENV !== "production"

@@ -1,0 +1,100 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.card {
+  width: 100%;
+  max-width: 400px;
+  padding: 32px;
+  background: var(--color-surface, #111);
+  border: 1px solid var(--color-border, #222);
+  border-radius: 12px;
+}
+
+.title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0 0 4px;
+}
+
+.subtitle {
+  color: var(--color-text-muted, #888);
+  font-size: 0.85rem;
+  margin-bottom: 24px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.field label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--color-text-muted, #aaa);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.field input {
+  padding: 8px 12px;
+  border: 1px solid var(--color-border, #333);
+  border-radius: 6px;
+  background: var(--color-bg, #0a0a0a);
+  color: var(--color-text, #eee);
+  font-size: 0.9rem;
+}
+
+.field input:focus {
+  outline: none;
+  border-color: var(--accent, oklch(0.72 0.14 145));
+}
+
+.error {
+  color: oklch(0.65 0.16 20);
+  font-size: 0.8rem;
+}
+
+.btnPrimary {
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  background: var(--accent, oklch(0.72 0.14 145));
+  color: #000;
+  margin-top: 8px;
+}
+
+.btnPrimary:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+.btnPrimary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.footer {
+  margin-top: 20px;
+  font-size: 0.82rem;
+  color: var(--color-text-muted, #888);
+  text-align: center;
+}
+
+.link {
+  color: var(--accent, oklch(0.72 0.14 145));
+  text-decoration: underline;
+}

@@ -43,3 +43,6 @@ yarn-error.log*
 next-env.d.ts
 
 .idea
+
+# npm lockfile (project uses yarn; prevent accidental re-commit)
+package-lock.json

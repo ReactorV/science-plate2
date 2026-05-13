@@ -20,7 +20,7 @@ const vitD: NutrientRow = {
   unit: "IU",
   rda: 800,
   ul: 4000,
-  conf: "medium",
+  conf: "med",
 };
 
 const noRda: NutrientRow = {
